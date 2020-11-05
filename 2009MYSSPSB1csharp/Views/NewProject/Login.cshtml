@@ -1,0 +1,47 @@
+﻿@model List<_2009MYSSPSB1csharp.Models.User>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login Page</h2><br>
+    <div class="login">
+        <form id="login" method="get" action="Display">
+            <label>
+                <b>
+                    User Name
+                </b>
+            </label>
+            <input type="text" name="Uname" id="Uname" placeholder="Username">
+            <br><br>
+
+
+            <span asp-validation-for="Uname"></span>
+
+            <label>
+                <b>
+                    Password
+                </b>
+            </label>
+            <input type="Password" name="Pass" id="Pass" placeholder="Password">
+            <br><br>
+            @using (Html.BeginForm("action", "NewProjectController"))
+            {
+
+                <input type="submit" value="Login" />
+
+            }
+            <br><br>
+
+        </form>
+    </div>
+</body>
+</html>

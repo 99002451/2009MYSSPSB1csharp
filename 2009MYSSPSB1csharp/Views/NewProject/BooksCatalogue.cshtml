@@ -1,0 +1,45 @@
+﻿@model List<_2009MYSSPSB1csharp.Models.BookTable>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BooksCatalogue</title>
+</head>
+<body>
+    <h1>Details of all the books available</h1>>
+    <hr />
+    <div>
+
+        <table width="50%">
+            <tr>
+                <th>Book ID</th>
+                <th>Book Title</th>
+                <th>Boook Description</th>
+                <th>Author of Book</th>
+                <th>Image</th>
+                <th>Quantity Available</th>
+
+            </tr>
+
+            @foreach (var boo in Model)
+            {
+                <tr>
+                    <td>@boo.bookID</td>
+                    <td>@boo.bookTitle</td>
+                    <td>@boo.bookDesc</td>
+                    <td>@boo.bookAuthor</td>
+                    <td>@boo.bookImage</td>
+                    <td>@boo.bookCount</td>
+                </tr>
+            }
+            }
+        </table>
+    </div>
+</body>
+</html>

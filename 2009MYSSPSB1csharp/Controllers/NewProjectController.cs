@@ -16,5 +16,21 @@ namespace _2009MYSSPSB1csharp.Controllers
             var model = context.Users.ToList();
             return View(model);
         }
+
+        public ViewResult Login()
+        {
+            var context = new pdatabaseProjectNewEntities1();
+            var model = context.Users.ToList();
+            return View(model);
+        }
+
+        public ViewResult BooksCatalogue()
+        {
+            var context = new pdatabaseProjectNewEntities();
+            var model = context.BookTables.ToList();
+            return View(model);
+        }
+
+
     }
 }
