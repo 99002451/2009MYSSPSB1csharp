@@ -9,39 +9,66 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
     <title>Login</title>
+    <style>
+        body {
+            background-image: url("https://www.umfiasi.ro/ro/PublishingImages/biblioteca.jpg");
+            height: 1000px; /* You must set a specified height */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;
+        }
+
+        .login {
+            margin-top: 5%;
+            text-align: center;
+            font-size: 200%;
+            font-family: 'Times New Roman';
+
+        }
+        h2{
+            
+            text-align:center;
+            padding-top:10%;
+        }
+    </style>
 </head>
 <body>
+    
     <h2>Login Page</h2><br>
-    <div class="login">
-        <form id="login" method="get" action="Display">
-            <label>
-                <b>
-                    User Name
-                </b>
-            </label>
-            <input type="text" name="Uname" id="Uname" placeholder="Username">
-            <br><br>
+                       <div >
+                           <div class="login">
+                               <form id="login" method="get" action="Display">
+                                   <label>
+                                       <b>
+                                           User Name
+                                       </b>
+                                   </label>
+                                   <input type="text" name="Uname" id="Uname" placeholder="Username">
+                                   <br><br>
 
 
-            <span asp-validation-for="Uname"></span>
+                                   <span asp-validation-for="Uname"></span>
 
-            <label>
-                <b>
-                    Password
-                </b>
-            </label>
-            <input type="Password" name="Pass" id="Pass" placeholder="Password">
-            <br><br>
-            @using (Html.BeginForm("action", "NewProjectController"))
-            {
+                                   <label>
+                                       <b>
+                                           Password
+                                       </b>
+                                   </label>
+                                   <input type="Password" name="Pass" id="Pass" placeholder="Password">
+                                   <br><br>
+                                   @using (Html.BeginForm("action", "NewProjectController"))
+                                   {
 
-                <input type="submit" value="Login" />
+                                       <input type="submit" value="Login" />
 
-            }
-            <br><br>
+                                   }
+                                   <br><br>
 
-        </form>
-    </div>
+                               </form>
+                           </div>
+                       </div>
 </body>
 </html>

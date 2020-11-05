@@ -1,0 +1,47 @@
+﻿@model List<_2009MYSSPSB1csharp.Models.BookTable>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ContactUs</title>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center">
+            <h2>Contact Us</h2>
+            <p>Contact us if you want any query related to books.</p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://hire4event.com/blogs/wp-content/uploads/2020/01/Conference.jpg" style="width:95%">
+            </div>
+            <div class="column">
+                <form action="Main">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="country">City</label>
+                    <select id="country" name="country">
+                        <option value="Australia">Mysuru</option>
+                        <option value="Canada">Bangalore</option>
+                        <option value="Usa">Chennai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                    </select>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

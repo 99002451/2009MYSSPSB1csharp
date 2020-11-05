@@ -31,6 +31,14 @@ namespace _2009MYSSPSB1csharp.Controllers
             return View(model);
         }
 
+        public ViewResult ContactUs()
+        {
+            var context = new pdatabaseProjectNewEntities();
+            var model = context.BookTables.ToList();
+            return View(model);
+
+        }
+
 
     }
 }

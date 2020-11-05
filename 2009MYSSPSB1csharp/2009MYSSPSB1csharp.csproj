@@ -183,6 +183,7 @@
     <Content Include="Views\NewProject\HomePage.cshtml" />
     <Content Include="Views\NewProject\Login.cshtml" />
     <Content Include="Views\NewProject\BooksCatalogue.cshtml" />
+    <Content Include="Views\NewProject\ContactUs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
