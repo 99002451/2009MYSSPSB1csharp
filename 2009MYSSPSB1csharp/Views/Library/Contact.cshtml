@@ -48,7 +48,7 @@
         <div class="container mt-5">
             <div class="card">
                 <div class="card-body">
-                    <form role="form" action="Main">
+                    <form role="form" action="Home">
                         <div class="form-group">
                             <label for="fname">First Name</label>
                             <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -73,13 +73,18 @@
                         <hr />
                         <div class="form-group">
                             <label for="subject">Query</label>
-                            <textarea id="subject" name="subject" placeholder="Provide your query here.." style="height:170px"></textarea>
+                            <textarea id="subject" name="subject" placeholder="Provide your query here.." style="height:50px; width:300px;"></textarea>
                         </div>
-                            <input type="submit" value="Submit">
+                            <input type="submit" value="Submit" onsubmit="alertf()">
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    @*<script>
+        //function alertf() {
+        //    alert("Thank you! We will reach out to you soon. :)");
+        //}
+    </script>*@
 </body>
 </html>
