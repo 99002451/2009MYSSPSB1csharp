@@ -7,18 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _2009MYSSPSB1csharp.Models
+namespace LibraryManagementSystem.Models
 {
     using System;
     using System.Collections.Generic;
     
     public partial class BookTable
     {
-        public int bookID { get; set; }
+        public int bookId { get; set; }
         public string bookTitle { get; set; }
         public string bookDesc { get; set; }
         public string bookAuthor { get; set; }
-        public byte[] bookImage { get; set; }
         public int bookCount { get; set; }
     }
 }
