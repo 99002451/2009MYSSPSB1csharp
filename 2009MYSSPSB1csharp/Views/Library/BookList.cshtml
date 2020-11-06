@@ -1,0 +1,57 @@
+﻿@model List<LibraryManagementSystem.Models.BookTable>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BookList</title>
+</head>
+<body>
+    <h1>Event Details</h1>
+    <div class="topnav">
+        <form id="login" method="get" action="AddBook">
+            @using (Html.BeginForm("action", "LibraryController"))
+            {
+
+                <input type="submit" value="AddBook" />
+
+            }
+        </form>
+    </div>
+    <div>
+
+        <table border="1" width="50%">
+            <tr>
+                <th>Book ID</th>
+                <th>Book Title</th>
+                <th>Book Author</th>
+                <th>Book Description</th>
+                <th>Book Count</th>
+                <th>Options</th>
+            </tr>
+
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.bookId</td>
+                    <td>@book.bookTitle</td>
+                    <td>@book.bookAuthor</td>
+                    <td>@book.bookDesc</td>
+                    <td>@book.bookCount</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = book.bookId })
+                        @Html.ActionLink("Delete", "Deletebook", new { id = book.bookId })
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>

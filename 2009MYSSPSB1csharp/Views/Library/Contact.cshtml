@@ -1,0 +1,85 @@
+﻿@model List<LibraryManagementSystem.Models.BookTable>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Contact</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"></link>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+    <style>
+        body {
+            background: #EECDA3;
+            background: -webkit-linear-gradient(to top, #EF629F, #EECDA3);
+            background: linear-gradient(to top, #EF629F, #EECDA3);
+        }
+
+        .container {
+            max-width: 550px;
+        }
+
+        .has-error label,
+        .has-error input,
+        .has-error textarea {
+            color: red;
+            border-color: red;
+        }
+
+        .list-unstyled li {
+            font-size: 13px;
+            padding: 4px 0 0;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center">
+            <h2>Contact Us for any queries related to books</h2>
+        </div>
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <form role="form" action="Main">
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <label for="country">-----City-----</label>
+                            <select id="country" name="country">
+                                <option value="australia">Mysuru</option>
+                                <option value="canada">Bangalore</option>
+                                <option value="usa">Chennai</option>
+                                <option value="delhi">Delhi</option>
+                                <option value="mumb">Mumbai</option>
+                                <option value="pune">Pune</option>
+                            </select>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <label for="subject">Query</label>
+                            <textarea id="subject" name="subject" placeholder="Provide your query here.." style="height:170px"></textarea>
+                        </div>
+                            <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

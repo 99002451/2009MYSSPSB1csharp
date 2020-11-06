@@ -1,0 +1,70 @@
+﻿@model LibraryManagementSystem.Models.BookTable
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Addbook</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <h1>Add Book</h1>
+        <table>
+            <p>
+                Book ID
+                @Html.EditorFor(model => model.bookId, new { htmlAttributes = new { @class = "form-control" } })
+            </p>
+            @Html.ValidationMessageFor(model => model.bookId, "", new { @class = "text-danger" })
+
+            <p>
+                Book Title
+                @Html.EditorFor(model => model.bookTitle, new { htmlAttributes = new { @class = "form-control" } })
+            </p>
+            @Html.ValidationMessageFor(model => model.bookTitle, "", new { @class = "text-danger" })
+
+
+
+            <p>
+                Book Author
+                @Html.EditorFor(model => model.bookAuthor)
+            </p>
+            @Html.ValidationMessageFor(model => model.bookAuthor, "", new { @class = "text-danger" })
+
+
+            <p>
+               Book Description
+                @Html.EditorFor(model => model.bookDesc)
+            </p>
+            @Html.ValidationMessageFor(model => model.bookDesc, "", new { @class = "text-danger" })
+
+            <p>
+               Book Count
+                @Html.EditorFor(model => model.bookCount)
+            </p>
+            @Html.ValidationMessageFor(model => model.bookCount, "", new { @class = "text-danger" })
+
+           
+        </table>
+        <div class="regis">
+
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Add Book" class="btn btn-default" />
+            </div>
+        </div>
+
+    }
+
+
+    <div class="backd">
+        @Html.ActionLink("Back to List", "BookList")
+    </div>
+</body>
+</html>

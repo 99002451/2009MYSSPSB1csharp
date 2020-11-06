@@ -1,0 +1,33 @@
+﻿@model LibraryManagementSystem.Models.BookTable
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <style>
+        body{
+            background-color:bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>Update Book Details</h1>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <p> Book Id: @Html.EditorFor((m) => m.bookId)</p>
+            <p> Book Name: @Html.EditorFor((m) => m.bookTitle)</p>
+            <p> Book Address: @Html.EditorFor((m) => m.bookAuthor)</p>
+            <p> Book Phone: @Html.EditorFor((m) => m.bookDesc)</p>
+            <p> Book Count: @Html.EditorFor((m) => m.bookCount)</p>
+            <button>Save Changes</button>
+        }
+    </div>
+</body>
+</html>

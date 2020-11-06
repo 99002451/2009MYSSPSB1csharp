@@ -1,0 +1,69 @@
+﻿@model List<LibraryManagementSystem.Models.Login>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("https://www.umfiasi.ro/ro/PublishingImages/biblioteca.jpg");
+            height: 1000px; /* You must set a specified height */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;
+        }
+
+        .login {
+            margin-top: 0.5%;
+            text-align: center;
+            font-size: 200%;
+            font-family: 'Baskerville Old Face';
+        }
+
+        h2 {
+            text-align: center;
+            padding-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login Page</h2><br>
+    <div class="login">
+        <form id="login" method="get" action="BookList">
+            <label>
+                <b>
+                    User Name
+                </b>
+            </label>
+            <input type="text" name="uname" id="uname" placeholder="Username" required>
+            <br><br>
+
+
+            <span asp-validation-for="Uname"></span>
+
+            <label>
+                <b>
+                    Password
+                </b>
+            </label>
+            <input type="Password" name="upass" id="upass" placeholder="Password" required>
+            <br><br>
+            @using (Html.BeginForm("action", "MiniProjectController"))
+            {
+
+                <input type="submit" value="Login" />
+
+            }
+            <br><br>
+
+        </form>
+    </div>
+</body>
+</html>
