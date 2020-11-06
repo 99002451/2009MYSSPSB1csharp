@@ -44,10 +44,7 @@
             </label>
             <input type="text" name="uname" id="uname" placeholder="Username" required>
             <br><br>
-
-
             <span asp-validation-for="Uname"></span>
-
             <label>
                 <b>
                     Password
@@ -57,12 +54,9 @@
             <br><br>
             @using (Html.BeginForm("action", "MiniProjectController"))
             {
-
                 <input type="submit" value="Login" />
-
             }
             <br><br>
-
         </form>
     </div>
 </body>
