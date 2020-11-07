@@ -24,9 +24,9 @@ Features:-
 
 ## Screenshots :camera:
 
-<p><img src="/screenshot/Home.png" width="400" height="350" hspace=40>
-  <img src="/screenshot/login.png" width="400" height="350" hspace=40>
-  <img src="/screenshot/bookdisplay.png" width="400" height="350" hspace=40>
+<p><img src="/Screenshots/Home.png" width="400" height="350" hspace=40>
+  <img src="/Screenshots/login.png" width="400" height="350" hspace=40>
+  <img src="/Screenshots/bookdisplay.png" width="400" height="350" hspace=40>
 </p>
 
 
